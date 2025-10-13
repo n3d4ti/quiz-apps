@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Vocabulary Test Prep - October 16th</title>
+    <link rel="stylesheet" href="landing-styles.css">
+</head>
+<body>
+    <div class="landing-container">
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">English Vocabulary Test</h1>
+                <p class="hero-subtitle">Prepare for your test on October 16th, 2024</p>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="daysLeft">3</span>
+                        <span class="countdown-label">Days Left</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="quiz-section">
+                <h2 class="section-title">Practice English Vocabulary</h2>
+                
+                <div class="single-quiz-container">
+                    <div class="quiz-card main-quiz">
+                        <div class="card-header">
+                            <div class="card-icon">📚</div>
+                            <div class="test-date">
+                                <span class="date-label">Test Date</span>
+                                <span class="date-value">October 16th, 2024</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="card-title">English Vocabulary Practice</h3>
+                        <p class="card-description">
+                            Master essential English words and definitions to ace your upcoming vocabulary test. 
+                            Practice with real test-style questions including word meanings, synonyms, and usage in context.
+                        </p>
+                        
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Vocabulary Words</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Multiple</span>
+                                <span class="stat-label">Practice Rounds</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Instant</span>
+                                <span class="stat-label">Feedback</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-features">
+                            <div class="feature-tag">✓ Word Definitions</div>
+                            <div class="feature-tag">✓ Synonyms & Antonyms</div>
+                            <div class="feature-tag">✓ Context Usage</div>
+                            <div class="feature-tag">✓ Spelling Practice</div>
+                        </div>
+                        
+                        <a href="words-16-oct-2025/index.html" class="start-button">
+                            <span class="button-text">Start Practice Test</span>
+                            <span class="button-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="study-tips">
+                <h2 class="section-title">Study Tips for Success</h2>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <div class="tip-icon">🎯</div>
+                        <h3>Focus on Weak Areas</h3>
+                        <p>Identify words you struggle with and practice them repeatedly until they become second nature.</p>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">📖</div>
+                        <h3>Learn in Context</h3>
+                        <p>Don't just memorize definitions - understand how words are used in sentences and different contexts.</p>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🔄</div>
+                        <h3>Practice Daily</h3>
+                        <p>Short, frequent practice sessions are more effective than long cramming sessions before the test.</p>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">✍️</div>
+                        <h3>Write It Down</h3>
+                        <p>Writing words and their meanings helps reinforce memory and improves spelling accuracy.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="progress-section">
+                <h2 class="section-title">Track Your Progress</h2>
+                <div class="progress-info">
+                    <p>Each practice session helps you get closer to test success. The quiz will track your performance and highlight areas that need more attention.</p>
+                    <div class="progress-features">
+                        <div class="progress-item">
+                            <span class="progress-icon">📊</span>
+                            <span>Score tracking across multiple attempts</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-icon">📝</span>
+                            <span>Detailed feedback on incorrect answers</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-icon">🎯</span>
+                            <span>Focus on challenging vocabulary</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Good luck on your English Vocabulary Test on October 16th! 🍀</p>
+                <p class="footer-sub">Practice makes perfect - you've got this!</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple countdown calculator
+        function updateCountdown() {
+            const testDate = new Date('2025-10-16');
+            const today = new Date();
+            const timeDiff = testDate.getTime() - today.getTime();
+            const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            
+            const countdownElement = document.getElementById('daysLeft');
+            if (countdownElement) {
+                if (daysLeft > 0) {
+                    countdownElement.textContent = daysLeft;
+                } else if (daysLeft === 0) {
+                    countdownElement.textContent = 'TODAY';
+                } else {
+                    countdownElement.textContent = 'PAST';
+                }
+            }
+        }
+        
+        // Update countdown when page loads
+        document.addEventListener('DOMContentLoaded', updateCountdown);
+    </script>
+</body>
+</html>
