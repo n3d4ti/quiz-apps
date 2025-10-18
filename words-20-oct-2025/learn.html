@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Toys Vocabulary - Interactive Pairing Game</title>
+    <link rel="stylesheet" href="learn-styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🧸 Learn Toys Vocabulary</h1>
+        <p>Match Hungarian words with their English translations</p>
+    </header>
+
+    <div class="game-container">
+        <div class="game-info">
+            <div class="score-time">
+                <div class="stat">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Time</div>
+                    <div class="stat-value" id="timer">0:00</div>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            
+            <div class="stat">
+                <div class="stat-label">Pairs Left</div>
+                <div class="stat-value" id="pairsLeft">7</div>
+            </div>
+        </div>
+
+        <div class="completion-message" id="completionMessage">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've successfully matched all the toys vocabulary!</p>
+            <div class="completion-stats">
+                <div class="completion-stat">
+                    <span class="completion-stat-value" id="finalScore">0</span>
+                    <span class="completion-stat-label">Final Score</span>
+                </div>
+                <div class="completion-stat">
+                    <span class="completion-stat-value" id="finalTime">0:00</span>
+                    <span class="completion-stat-label">Time Taken</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area" id="gameArea">
+            <div class="word-column">
+                <h2 class="column-title">🇭🇺 Hungarian</h2>
+                <div class="word-list" id="hungarianWords"></div>
+            </div>
+            
+            <div class="word-column">
+                <h2 class="column-title">🇬🇧 English</h2>
+                <div class="word-list" id="englishWords"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="newGameBtn">🔄 New Game</button>
+            <a href="index.html" class="btn btn-secondary">📝 Take Quiz</a>
+            <a href="../index.html" class="btn btn-secondary">🏠 Main Menu</a>
+        </div>
+    </div>
+
+    <script src="learn-script.js"></script>
+</body>
+</html>
