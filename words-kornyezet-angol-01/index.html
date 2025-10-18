@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment & Nature Vocabulary Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header class="quiz-header">
+            <h1>Environment & Nature Vocabulary</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="quiz-info">
+                <span id="questionCounter">Question 1 of 9</span>
+                <span id="score">Score: 0</span>
+            </div>
+        </header>
+
+        <main class="quiz-main">
+            <div class="question-container" id="questionContainer">
+                <h2 class="question-text" id="questionText">Loading question...</h2>
+                <div class="answer-container">
+                    <input type="text" class="answer-input" id="answerInput" placeholder="Type your answer here..." autocomplete="off">
+                    <button class="submit-btn" id="submitBtn">Submit</button>
+                </div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-btn" id="prevBtn" disabled>Previous</button>
+                <button class="nav-btn" id="nextBtn" style="display: none;">Next</button>
+                <button class="nav-btn primary" id="startBtn">Start Quiz</button>
+            </div>
+        </main>
+
+        <div class="results-container" id="resultsContainer" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <div class="results-summary">
+                <div class="score-display">
+                    <span class="score-label">Final Score:</span>
+                    <span class="score-value" id="finalScore">0/9</span>
+                </div>
+                <div class="percentage" id="percentage">0%</div>
+            </div>
+            <div class="results-details" id="resultsDetails"></div>
+            <button class="restart-btn" id="restartBtn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
