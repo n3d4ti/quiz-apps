@@ -45,6 +45,19 @@ cp words-16-oct-2025/learn.html words-[name]-[date]/learn.html
 cp words-16-oct-2025/learn-styles.css words-[name]-[date]/learn-styles.css
 ```
 
+### Navigation Structure
+All quiz applications now include navigation buttons in the header:
+- **🏠 Main Menu** - Links back to main landing page (`../index.html`)
+- **🎮 Practice Game** - Links to corresponding learning game (`learn.html`)
+
+The navigation HTML structure is already included in base files:
+```html
+<div class="top-navigation">
+    <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+    <a href="learn.html" class="nav-link">🎮 Practice Game</a>
+</div>
+```
+
 ## PART A: Quiz Application Creation
 
 ### 4. Modify Quiz HTML File
@@ -179,6 +192,13 @@ The `learn-styles.css` file can be copied directly from existing learning games 
 - Score and timer styling
 
 ## PART C: Landing Page Integration
+
+### Card Styling
+All quiz cards now use a **compact design** similar to learning cards:
+- Smaller minimum width: `300px` (reduced from `450px`)
+- Compact padding: `30px 25px` (reduced horizontal padding)
+- Rounded corners: `20px` (consistent with learning cards)
+- Enhanced hover effects for better user interaction
 
 ### 9. Add Quiz Card to Landing Page
 Add a new quiz card to the main `index.html` in the quiz section:

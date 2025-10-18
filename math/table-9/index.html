@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Times Table Quiz</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="top-navigation">
+            <a href="../index.html" class="nav-link">🏠 Math Menu</a>
+            <a href="learn.html" class="nav-link">🎮 Practice Game</a>
+        </div>
+
+        <div class="quiz-header">
+            <h1>9 Times Table Quiz</h1>
+            <div class="quiz-info">
+                <div class="info-item">
+                    <span class="info-number">24</span>
+                    <span class="info-label">Questions</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-number" id="questionCounter">Ready to start?</span>
+                    <span class="info-label">Progress</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-number" id="score">Score: 0</span>
+                    <span class="info-label">Points</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <button id="startBtn" class="start-btn">Start 9 Times Table Quiz</button>
+
+        <div id="questionContainer" class="question-container" style="display: none;">
+            <div class="question-card">
+                <div class="question-text" id="questionText"></div>
+                <div class="answer-section">
+                    <input type="text" id="answerInput" class="answer-input" placeholder="Enter your answer">
+                    <button id="submitBtn" class="submit-btn">Submit</button>
+                </div>
+                <div id="feedback" class="feedback"></div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="prevBtn" class="nav-btn">← Previous</button>
+                <button id="nextBtn" class="nav-btn" style="display: none;">Next →</button>
+            </div>
+        </div>
+
+        <div id="resultsContainer" class="results-container" style="display: none;">
+            <div class="results-card">
+                <h2>Quiz Complete!</h2>
+                <div class="final-score">
+                    <div class="score-circle">
+                        <span id="finalScore">0/24</span>
+                        <span id="percentage">0%</span>
+                    </div>
+                </div>
+                
+                <div class="results-details" id="resultsDetails"></div>
+                
+                <div class="results-actions">
+                    <button id="restartBtn" class="restart-btn">Try Again</button>
+                    <a href="../index.html" class="back-btn">Back to Math Menu</a>
+                    <a href="learn.html" class="practice-btn">Practice Game</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
