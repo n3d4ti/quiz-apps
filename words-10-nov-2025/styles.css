@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.quiz-header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.quiz-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #10b981;
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.quiz-main {
+    padding: 40px;
+}
+
+.question-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.question-text {
+    font-size: 1.8rem;
+    color: #1f2937;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.answer-container {
+    display: flex;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.answer-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.answer-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.feedback {
+    min-height: 50px;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.feedback.correct {
+    background: #d1fae5;
+    color: #065f46;
+    border: 2px solid #10b981;
+}
+
+.feedback.incorrect {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 2px solid #ef4444;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    color: #374151;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.nav-btn.primary {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.nav-btn.primary:hover {
+    background: #059669;
+}
+
+.results-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.results-container h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 30px;
+}
+
+.results-summary {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.score-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.score-label {
+    font-size: 1.3rem;
+    color: #6b7280;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.percentage {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.results-details {
+    text-align: left;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-question {
+    font-weight: 600;
+    color: #374151;
+}
+
+.result-answer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.answer-correct {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.answer-incorrect {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.restart-btn {
+    padding: 15px 40px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 10px;
+    }
+    
+    .quiz-header {
+        padding: 20px;
+    }
+    
+    .quiz-header h1 {
+        font-size: 2rem;
+    }
+    
+    .quiz-main {
+        padding: 20px;
+    }
+    
+    .question-text {
+        font-size: 1.4rem;
+    }
+    
+    .answer-container {
+        flex-direction: column;
+    }
+    
+    .quiz-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
