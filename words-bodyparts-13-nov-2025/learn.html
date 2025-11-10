@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Parts Learning Game</title>
+    <link rel="stylesheet" href="learn-styles.css">
+</head>
+<body>
+    <div class="top-navigation">
+        <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+        <a href="index.html" class="nav-link">📝 Take Quiz</a>
+    </div>
+
+    <div class="game-container">
+        <h1>Body Parts Learning Game</h1>
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="timer">Time: <span id="time">0</span>s</div>
+        </div>
+        
+        <div class="instructions">
+            Match the Hungarian words with their English translations!
+        </div>
+        
+        <div class="game-board" id="game-board">
+            <div class="column hungarian-column">
+                <h3>Hungarian</h3>
+                <div class="cards-container" id="hungarian-cards"></div>
+            </div>
+            
+            <div class="column english-column">
+                <h3>English</h3>
+                <div class="cards-container" id="english-cards"></div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button class="control-btn" id="shuffle-btn">🔄 Shuffle</button>
+            <button class="control-btn" id="reset-btn">🔄 Reset Game</button>
+        </div>
+        
+        <div class="game-results" id="game-results" style="display: none;">
+            <h2>Congratulations! 🎉</h2>
+            <div class="completion-message">
+                You've successfully matched all the pairs!
+            </div>
+            <div class="final-stats">
+                <div>Final Score: <span id="final-score">0</span></div>
+                <div>Time Taken: <span id="final-time">0</span> seconds</div>
+            </div>
+            <button class="control-btn" id="play-again-btn">🎮 Play Again</button>
+        </div>
+    </div>
+
+    <script src="learn-script.js"></script>
+</body>
+</html>

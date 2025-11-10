@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Process Vocabulary Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-navigation">
+        <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+        <a href="learn.html" class="nav-link">🎮 Practice Game</a>
+    </div>
+
+    <div class="quiz-container">
+        <h1>Life Process Vocabulary Quiz</h1>
+        <div class="quiz-header">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="progress">Question <span id="current-question">1</span> of <span id="total-questions">7</span></div>
+        </div>
+        
+        <div class="question-container">
+            <div class="question-text" id="question-text">Loading...</div>
+            <input type="text" class="answer-input" id="answer-input" placeholder="Type your answer here..." autocomplete="off">
+            <button class="submit-btn" id="submit-btn">Submit</button>
+        </div>
+        
+        <div class="feedback" id="feedback"></div>
+        
+        <div class="quiz-actions">
+            <button class="action-btn" id="next-btn" style="display: none;">Next Question</button>
+            <button class="action-btn" id="restart-btn" style="display: none;">Restart Quiz</button>
+        </div>
+        
+        <div class="quiz-results" id="quiz-results" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <div class="final-score">Your Score: <span id="final-score">0</span>/7</div>
+            <div class="performance-message" id="performance-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

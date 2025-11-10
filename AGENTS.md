@@ -15,11 +15,21 @@ No build system - open HTML files directly in browser for testing. No package.js
 - Arrow functions for event handlers
 - DOM elements stored as instance properties (this.questionText, etc.)
 - Event listeners with arrow functions: `addEventListener('click', () => this.method())`
+- Initialize all DOM elements in `initializeElements()` method
+- Separate event binding in `bindEvents()` method
+- Use spread operator for array copying: `[...array]`
 
 ### HTML
 - Semantic HTML5 elements
 - BEM-like class naming: `.quiz-container`, `.question-text`, `.answer-input`
 - Navigation structure: `<div class="top-navigation">` with 🏠 Main Menu and 🎮 Practice Game links
+- Consistent ID naming for JavaScript references
+
+### CSS
+- Mobile-first responsive design with `@media` queries
+- CSS variables for consistent theming
+- Smooth transitions and hover effects
+- Grid/flexbox for layouts
 
 ### File Organization
 - Quiz files: `index.html`, `script.js`, `styles.css`
