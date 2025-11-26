@@ -641,3 +641,21 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* Loading message styles */
+.loading-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+    font-size: 1.1rem;
+    grid-column: 1 / -1; /* Span all columns */
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px dashed #ddd;
+}
+
+.loading-message::before {
+    content: "⏳ ";
+    margin-right: 8px;
+}
