@@ -99,6 +99,17 @@ const quizData = {
       features: ["Biology Terms", "Environmental Science", "Organism Functions", "Scientific Vocabulary"],
       url: "words-environment-biology-23-nov-2025/index.html",
       buttonText: "Start Biology Quiz"
+    },
+    {
+      id: "characteristics",
+      icon: "🔍",
+      title: "Characteristics Vocabulary",
+      description: "Master essential vocabulary about characteristics and comparisons. Learn to describe properties, similarities, differences, and sorting processes in English.",
+      testDate: "January 4th, 2026",
+      wordCount: 12,
+      features: ["Characteristics Terms", "Comparison Vocabulary", "Sorting Processes", "Scientific Description"],
+      url: "words-characteristics-04-jan-2026/index.html",
+      buttonText: "Start Characteristics Quiz"
     }
   ],
   
@@ -174,6 +185,14 @@ const quizData = {
       description: "Master biology and environmental science vocabulary through interactive matching. Learn about organisms and their environmental responses!",
       features: ["Scientific terms", "Environmental science", "Biology vocabulary"],
       url: "words-environment-biology-23-nov-2025/learn.html"
+    },
+    {
+      id: "characteristics-game",
+      icon: "🔍",
+      title: "Characteristics Pairing Game",
+      description: "Master characteristics vocabulary through interactive matching. Learn to describe properties, similarities, differences, and comparison terms!",
+      features: ["Characteristics terms", "Comparison vocabulary", "Scientific description"],
+      url: "words-characteristics-04-jan-2026/learn.html"
     }
   ]
 };

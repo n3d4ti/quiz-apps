@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characteristics Vocabulary Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-navigation">
+        <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+        <a href="learn.html" class="nav-link">🎮 Practice Game</a>
+    </div>
+
+    <div class="quiz-container">
+        <h1>Characteristics Vocabulary Quiz</h1>
+        <p class="quiz-description">Test your knowledge of Hungarian vocabulary related to characteristics and comparisons.</p>
+
+        <div class="quiz-info">
+            <span id="questionCounter">Question 1 of 12</span>
+            <span id="score">Score: 0/0</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div id="questionContainer" class="question-container" style="display: none;">
+            <div class="question-text" id="questionText">What is the English translation?</div>
+            
+            <div class="answer-container">
+                <input type="text" id="answerInput" class="answer-input" placeholder="Enter your answer...">
+                <button id="submitBtn" class="submit-btn">Submit</button>
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="navigation-buttons">
+                <button id="prevBtn" class="nav-btn" style="display: none;">Previous</button>
+                <button id="nextBtn" class="nav-btn" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="startContainer" class="start-container">
+            <h2>Ready to test your vocabulary?</h2>
+            <p>You'll be presented with Hungarian words and phrases related to characteristics and comparisons. Type the English translation for each one.</p>
+            <button id="startBtn" class="start-button">Start Quiz</button>
+        </div>
+
+        <div id="resultsContainer" class="results-container" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <div class="completion-message">
+                <p id="finalScore">Your final score: 0/12</p>
+                <p id="percentage">Percentage: 0%</p>
+            </div>
+            
+            <div id="resultsDetails" class="results-details"></div>
+            
+            <div class="results-actions">
+                <button id="restartBtn" class="restart-btn">Restart Quiz</button>
+                <a href="learn.html" class="learn-btn">Try Practice Game</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

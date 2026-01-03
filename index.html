@@ -23,12 +23,38 @@
         </header>
 
         <main class="main-content">
+            <section class="progress-section">
+                <h2 class="section-title">Your Progress</h2>
+                <div class="progress-overview" id="progress-overview">
+                    <div class="loading-message">Loading progress...</div>
+                </div>
+            </section>
+
             <section class="quiz-section">
                 <h2 class="section-title">Practice English Vocabulary</h2>
                 
-                <div class="quiz-grid" id="quiz-grid">
-                    <!-- Quiz cards will be generated here by JavaScript -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="quiz-search" placeholder="Search quizzes by name or topic..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="words">Words</button>
+                        <button class="filter-btn" data-category="environment">Environment</button>
+                        <button class="filter-btn" data-category="body">Body Parts</button>
+                    </div>
+                </div>
+                
+                <!-- Category sections will be generated here by JavaScript -->
+                <div class="quiz-categories" id="quiz-categories">
                     <div class="loading-message">Loading quizzes...</div>
+                </div>
+                
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-icon">😞</div>
+                    <h3>No quizzes found</h3>
+                    <p>Try adjusting your search terms or filters.</p>
                 </div>
             </section>
 
@@ -36,9 +62,22 @@
                 <h2 class="section-title">Interactive Learning Games</h2>
                 <p class="section-description">Practice vocabulary with fun pairing games before taking the quiz!</p>
                 
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="learning-search" placeholder="Search learning games..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+                
                 <div class="learning-grid" id="learning-grid">
                     <!-- Learning game cards will be generated here by JavaScript -->
                     <div class="loading-message">Loading learning games...</div>
+                </div>
+                
+                <div class="no-results" id="no-learning-results" style="display: none;">
+                    <div class="no-results-icon">😞</div>
+                    <h3>No learning games found</h3>
+                    <p>Try adjusting your search terms.</p>
                 </div>
             </section>
 
@@ -103,15 +142,15 @@
                     <p class="cta-description">Choose any quiz above to begin your vocabulary practice journey. Remember, consistent practice leads to success!</p>
                     <div class="cta-stats">
                         <div class="cta-stat">
-                            <span class="cta-number">9</span>
+                            <span class="cta-number">10</span>
                             <span class="cta-label">Vocabulary Quizzes</span>
                         </div>
                         <div class="cta-stat">
-                            <span class="cta-number">9</span>
+                            <span class="cta-number">10</span>
                             <span class="cta-label">Learning Games</span>
                         </div>
                         <div class="cta-stat">
-                            <span class="cta-number">100+</span>
+                            <span class="cta-number">110+</span>
                             <span class="cta-label">Practice Questions</span>
                         </div>
                     </div>
