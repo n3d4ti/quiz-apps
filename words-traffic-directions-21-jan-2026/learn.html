@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Directions - Practice Game</title>
+    <link rel="stylesheet" href="learn-styles.css">
+</head>
+<body>
+    <div class="game-app">
+        <div class="top-navigation">
+            <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+            <a href="index.html" class="nav-link">📝 Take Quiz</a>
+        </div>
+
+        <div class="game-container">
+            <h1>🚗 Traffic Directions Practice Game</h1>
+            <p class="game-description">Match Hungarian traffic directions with their English translations</p>
+
+            <div class="game-info">
+                <div class="score-display">
+                    Score: <span id="scoreValue">0</span>
+                </div>
+                <div class="pairs-remaining">
+                    Pairs left: <span id="pairsLeft">6</span>
+                </div>
+            </div>
+
+            <div class="word-grid">
+                <div class="word-column">
+                    <h3>Hungarian 🇭🇺</h3>
+                    <div class="word-cards hungarian-words" id="hungarianWords"></div>
+                </div>
+                
+                <div class="word-column">
+                    <h3>English 🇺🇸</h3>
+                    <div class="word-cards english-words" id="englishWords"></div>
+                </div>
+            </div>
+
+            <div class="game-feedback" id="gameFeedback"></div>
+
+            <div class="game-actions">
+                <button id="newGameBtn" class="action-btn new-game-btn">New Game</button>
+                <button id="showAllBtn" class="action-btn show-all-btn">Show All Pairs</button>
+            </div>
+
+            <div id="completionMessage" class="completion-message" style="display: none;">
+                <h2>🎉 Congratulations!</h2>
+                <p>You've successfully matched all the traffic directions!</p>
+                <div class="completion-score">
+                    Final Score: <span id="finalScore">0</span> points
+                </div>
+                <div class="completion-actions">
+                    <button id="playAgainBtn" class="action-btn play-again-btn">Play Again</button>
+                    <a href="index.html" class="action-btn quiz-btn">Take Quiz</a>
+                    <a href="../index.html" class="action-btn home-btn">Main Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="learn-script.js"></script>
+</body>
+</html>

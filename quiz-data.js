@@ -110,6 +110,17 @@ const quizData = {
       features: ["Characteristics Terms", "Comparison Vocabulary", "Sorting Processes", "Scientific Description"],
       url: "words-characteristics-04-jan-2026/index.html",
       buttonText: "Start Characteristics Quiz"
+    },
+    {
+      id: "traffic-directions",
+      icon: "🚗",
+      title: "Traffic Directions Vocabulary",
+      description: "Master essential traffic and driving directions vocabulary. Learn navigation commands, traffic instructions, and safety directions for driving and road safety.",
+      testDate: "January 21st, 2026",
+      wordCount: 6,
+      features: ["Navigation Commands", "Traffic Instructions", "Safety Directions", "Driving Vocabulary"],
+      url: "words-traffic-directions-21-jan-2026/index.html",
+      buttonText: "Start Traffic Quiz"
     }
   ],
   
@@ -193,6 +204,14 @@ const quizData = {
       description: "Master characteristics vocabulary through interactive matching. Learn to describe properties, similarities, differences, and comparison terms!",
       features: ["Characteristics terms", "Comparison vocabulary", "Scientific description"],
       url: "words-characteristics-04-jan-2026/learn.html"
+    },
+    {
+      id: "traffic-directions-game",
+      icon: "🚦",
+      title: "Traffic Directions Pairing Game",
+      description: "Master traffic and driving directions vocabulary through interactive matching. Learn navigation commands, traffic instructions, and safety directions!",
+      features: ["Navigation commands", "Traffic instructions", "Safety vocabulary"],
+      url: "words-traffic-directions-21-jan-2026/learn.html"
     }
   ]
 };

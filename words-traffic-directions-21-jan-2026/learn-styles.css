@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-app {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.nav-link {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.game-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9ff, #e8eaff);
+    border-radius: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.score-display, .pairs-remaining {
+    font-size: 1.2rem;
+}
+
+.score-display span, .pairs-remaining span {
+    color: #667eea;
+    font-size: 1.4rem;
+}
+
+.word-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.word-column {
+    text-align: center;
+}
+
+.word-column h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.word-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.word-card {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.word-card:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.word-card.selected {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.word-card.matched {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-color: #28a745;
+    cursor: default;
+    transform: none;
+}
+
+.word-card.matched:hover {
+    transform: none;
+}
+
+.word-card.incorrect {
+    background: linear-gradient(135deg, #dc3545, #e74c3c);
+    color: white;
+    border-color: #dc3545;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.game-feedback {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-feedback.success {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.game-feedback.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+.game-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.new-game-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.show-all-btn {
+    background: #17a2b8;
+    color: white;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.completion-message {
+    text-align: center;
+    padding: 40px;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #f8f9ff, #e8eaff);
+    border-radius: 20px;
+    border: 3px solid #667eea;
+}
+
+.completion-message h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.completion-message p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+.completion-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 30px;
+}
+
+.completion-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.play-again-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.quiz-btn {
+    background: #28a745;
+    color: white;
+}
+
+.home-btn {
+    background: #6c757d;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .game-container {
+        padding: 25px;
+    }
+    
+    .top-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-link {
+        text-align: center;
+    }
+    
+    .word-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .game-actions, .completion-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .word-card {
+        font-size: 1rem;
+        min-height: 60px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .word-column h3 {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+    
+    .word-card {
+        font-size: 0.9rem;
+        min-height: 55px;
+        padding: 12px;
+    }
+    
+    .completion-message {
+        padding: 25px;
+    }
+    
+    .completion-message h2 {
+        font-size: 2rem;
+    }
+    
+    .completion-score {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation for matched pairs */
+.word-card.matched {
+    animation: matchSuccess 0.6s ease-in-out;
+}
+
+@keyframes matchSuccess {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Hover effects for better interactivity */
+.hungarian-card:hover {
+    border-left: 4px solid #667eea;
+}
+
+.english-card:hover {
+    border-right: 4px solid #764ba2;
+}
+
+/* Focus states for accessibility */
+.word-card:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
