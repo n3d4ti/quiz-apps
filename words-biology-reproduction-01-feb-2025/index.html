@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology: Reproduction - Hungarian-English Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-navigation">
+        <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+        <a href="learn.html" class="nav-link">🎮 Practice Game</a>
+    </div>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Biology: Reproduction Quiz</h1>
+            <p class="quiz-description">Test your knowledge of Hungarian biological and reproduction terms!</p>
+        </div>
+
+        <div class="quiz-info">
+            <span id="questionCounter">Question 1 of 5</span>
+            <span id="score">Score: 0/0</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div id="quizContent" class="quiz-content">
+            <div class="question-container">
+                <h2 id="questionText" class="question-text">Loading...</h2>
+            </div>
+
+            <div class="answer-container">
+                <input type="text" id="answerInput" class="answer-input" placeholder="Enter your answer in English..." autocomplete="off">
+                <button id="submitBtn" class="submit-btn">Submit Answer</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+            
+            <div class="navigation-buttons">
+                <button id="prevBtn" class="nav-btn prev-btn" style="display: none;">Previous</button>
+                <button id="nextBtn" class="nav-btn next-btn" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="resultsContainer" class="results-container" style="display: none;">
+            <div class="completion-message">
+                <h2>Quiz Completed! 🎉</h2>
+                <div id="finalScore" class="final-score"></div>
+                <div id="scoreBreakdown" class="score-breakdown"></div>
+                
+                <div class="action-buttons">
+                    <button id="restartBtn" class="action-btn restart-btn">Restart Quiz</button>
+                    <button id="reviewBtn" class="action-btn review-btn">Review Answers</button>
+                    <a href="learn.html" class="action-btn practice-btn">Practice Game</a>
+                    <a href="../index.html" class="action-btn home-btn">Main Menu</a>
+                </div>
+            </div>
+
+            <div id="reviewSection" class="review-section" style="display: none;">
+                <h3>Answer Review</h3>
+                <div id="reviewContent" class="review-content"></div>
+                <button id="backToResultsBtn" class="action-btn">Back to Results</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

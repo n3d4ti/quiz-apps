@@ -121,6 +121,17 @@ const quizData = {
       features: ["Navigation Commands", "Traffic Instructions", "Safety Directions", "Driving Vocabulary"],
       url: "words-traffic-directions-21-jan-2026/index.html",
       buttonText: "Start Traffic Quiz"
+    },
+    {
+      id: "biology-reproduction",
+      icon: "🧬",
+      title: "Biology: Reproduction Vocabulary",
+      description: "Master essential biology vocabulary about reproduction processes. Learn terms related to birth, egg-laying, and biological development in living organisms.",
+      testDate: "February 1st, 2026",
+      wordCount: 5,
+      features: ["Reproduction Terms", "Biology Vocabulary", "Life Sciences", "Scientific Processes"],
+      url: "words-biology-reproduction-01-feb-2025/index.html",
+      buttonText: "Start Biology Quiz"
     }
   ],
   
@@ -212,6 +223,14 @@ const quizData = {
       description: "Master traffic and driving directions vocabulary through interactive matching. Learn navigation commands, traffic instructions, and safety directions!",
       features: ["Navigation commands", "Traffic instructions", "Safety vocabulary"],
       url: "words-traffic-directions-21-jan-2026/learn.html"
+    },
+    {
+      id: "biology-reproduction-game",
+      icon: "🧬",
+      title: "Biology: Reproduction Pairing Game",
+      description: "Master biology reproduction vocabulary through interactive matching. Learn terms about birth, egg-laying, and biological development processes!",
+      features: ["Reproduction terms", "Biology vocabulary", "Scientific processes"],
+      url: "words-biology-reproduction-01-feb-2025/learn.html"
     }
   ]
 };

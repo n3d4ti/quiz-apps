@@ -1,7 +1,7 @@
 # Agent Instructions for Quiz Apps
 
 ## Overview
-This repository contains educational quiz applications built with vanilla HTML, CSS, and JavaScript. The codebase includes word/vocabulary quizzes and math multiplication table quizzes, each with both quiz and interactive learning game modes.
+This repository contains educational quiz applications built with vanilla HTML, CSS, and JavaScript. The codebase includes 87 vocabulary quiz folders and math multiplication table quizzes, each with both quiz and interactive learning game modes.
 
 ## Build/Test Commands
 - **No build system**: Static HTML/CSS/JavaScript - no npm, webpack, or dependencies
@@ -10,38 +10,50 @@ This repository contains educational quiz applications built with vanilla HTML, 
 - **Single test**: Navigate to specific quiz folder (e.g., `words-activities-26-nov-2025/index.html`)
 - **Development tools**: Use browser DevTools console for debugging
 - **Validation**: Check HTML structure balance, verify all div tags have matching open/close pairs
-- **Local storage**: Some apps use localStorage for progress tracking
+- **Local storage**: Apps use localStorage for progress tracking and quiz metadata
 
 ```bash
-# Test main landing page
+# Test main landing page with dynamic card generation
 open index.html
 
-# Test specific word quiz
+# Test specific vocabulary quiz (87 available themes)
 open words-activities-26-nov-2025/index.html
 
-# Test learning game
+# Test learning/pairing game
 open words-activities-26-nov-2025/learn.html
 
-# Test math quiz
+# Test math quiz (tables 1-12)
 open math/table-5/index.html
+
+# Test math learning modes
+open math/learn-easy/index.html
+
+# Quick validation check
+grep -r "<div" . | wc -l  # Count opening divs
+grep -r "</div>" . | wc -l  # Count closing divs (should match)
 ```
 
 ## Project Structure
 ```
 quiz-apps/
+├── index.html                    # Main landing page (dynamic cards)
+├── quiz-data.js                  # Centralized quiz metadata
+├── card-renderer.js              # Dynamic card generation logic
+├── landing-styles.css            # Landing page styles
+├── QUIZ_CREATION_INSTRUCTIONS.md # Step-by-step creation guide
 ├── math/
-│   ├── table-[1-12]/          # Individual multiplication tables
+│   ├── index.html               # Math section landing
+│   ├── table-[1-12]/           # Individual multiplication tables
 │   ├── learn-[easy|medium|hard|mixed]/  # Learning modes
-│   └── mixed-tables/          # Combined practice
-├── words-[theme]-[date]/      # Vocabulary quizzes
-│   ├── index.html            # Main quiz
-│   ├── script.js            # Quiz logic  
-│   ├── styles.css           # Quiz styling
-│   ├── learn.html           # Learning game
-│   ├── learn-script.js      # Learning game logic
-│   └── learn-styles.css     # Learning game styling
-├── index.html               # Landing page
-└── AGENTS.md               # This file
+│   └── mixed-tables/           # Combined practice
+├── words-[theme]-[date]/       # Vocabulary quizzes (87 folders)
+│   ├── index.html             # Main quiz
+│   ├── script.js             # Quiz logic  
+│   ├── styles.css            # Quiz styling
+│   ├── learn.html            # Learning/pairing game
+│   ├── learn-script.js       # Learning game logic
+│   └── learn-styles.css      # Learning game styling
+└── AGENTS.md                  # This file
 ```
 
 ## Code Architecture Patterns

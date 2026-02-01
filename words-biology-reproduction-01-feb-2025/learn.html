@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology: Reproduction - Practice Game</title>
+    <link rel="stylesheet" href="learn-styles.css">
+</head>
+<body>
+    <div class="top-navigation">
+        <a href="../index.html" class="nav-link">🏠 Main Menu</a>
+        <a href="index.html" class="nav-link">📝 Take Quiz</a>
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Biology: Reproduction</h1>
+            <p class="game-description">Match Hungarian biological terms with their English translations!</p>
+        </div>
+
+        <div class="game-info">
+            <div class="score-container">
+                <span class="score-label">Score:</span>
+                <span id="score" class="score-value">0</span>
+            </div>
+            <div class="timer-container">
+                <span class="timer-label">Time:</span>
+                <span id="timer" class="timer-value">0:00</span>
+            </div>
+            <div class="progress-container">
+                <span class="progress-label">Progress:</span>
+                <span id="progressText" class="progress-value">0/5</span>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div id="gameContent" class="game-content">
+            <div class="instructions">
+                <p>Click on a Hungarian term, then click on its English translation to make a match!</p>
+                <p><strong>Scoring:</strong> +10 points for correct matches, -2 points for wrong attempts</p>
+            </div>
+
+            <div class="word-grid">
+                <div class="word-column hungarian-words">
+                    <h3>Hungarian</h3>
+                    <div id="hungarianCards" class="word-cards"></div>
+                </div>
+
+                <div class="word-column english-words">
+                    <h3>English</h3>
+                    <div id="englishCards" class="word-cards"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="completionContainer" class="completion-container" style="display: none;">
+            <div class="completion-message">
+                <h2>Congratulations! 🎉</h2>
+                <div id="finalStats" class="final-stats"></div>
+                
+                <div class="action-buttons">
+                    <button id="playAgainBtn" class="action-btn play-again-btn">Play Again</button>
+                    <a href="index.html" class="action-btn quiz-btn">Take Quiz</a>
+                    <a href="../index.html" class="action-btn home-btn">Main Menu</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="restartBtn" class="control-btn restart-btn">Restart Game</button>
+            <button id="hintBtn" class="control-btn hint-btn">Show Hint</button>
+        </div>
+    </div>
+
+    <!-- Hint Modal -->
+    <div id="hintModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Hint</h3>
+                <button id="closeHintBtn" class="close-btn">&times;</button>
+            </div>
+            <div id="hintContent" class="modal-body">
+                <p>Click on any Hungarian word to see its English translation!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="learn-script.js"></script>
+</body>
+</html>
